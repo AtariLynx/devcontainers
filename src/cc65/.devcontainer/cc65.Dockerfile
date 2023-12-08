@@ -2,8 +2,8 @@
 
 # [Choice] Alpine version: 3.12, 3.11, 3.10, ..., 3.18
 ARG VARIANT="3.18"
-# FROM mcr.microsoft.com/vscode/devcontainers/base:0-alpine-${VARIANT}
-FROM mcr.microsoft.com/devcontainers/dotnet:1-8.0-bookworm
+FROM mcr.microsoft.com/vscode/devcontainers/base:0-alpine-${VARIANT}
+# FROM mcr.microsoft.com/devcontainers/dotnet:1-8.0-bookworm
 RUN apk update && \
     apk add --no-cache --virtual .build-deps git build-base
     

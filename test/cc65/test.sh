@@ -4,7 +4,7 @@ source test-utils.sh
 
 # Template specific tests
 check "distro" lsb_release -c
-check "color" [ $(cat /tmp/color.txt | grep red) ]
+check "cc65" [ $(cc65 | grep No input files) ]
 
 # Report result
 reportResults
