@@ -5,8 +5,7 @@ ARG VARIANT="3.18"
 
 FROM mcr.microsoft.com/vscode/devcontainers/base:0-alpine-${VARIANT}
 # FROM mcr.microsoft.com/devcontainers/dotnet:1-8.0-bookworm
-#ARG CC65_VERSION="${templateOption:cc65Version}:-latest"
-ARG CC65_VERSION="V2.18"
+ARG CC65_VERSION="${templateOption:cc65Version}:-latest"
 
 RUN apk update && \
     apk add --no-cache --virtual .build-deps git build-base

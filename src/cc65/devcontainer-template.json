@@ -1,7 +1,7 @@
 {
-    "id": "atarilynx",
+    "id": "cc65",
     "version": "0.1.0",
-    "name": "AtariLynx",
+    "name": "CC65",
     "description": "Atari Lynx dev container template for CC65",
     "documentationURL": "https://github.com/AtariLynx/",
     "publisher": "Atari Lynx developers community",
