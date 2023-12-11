@@ -17,14 +17,23 @@
             ],
             "default": "3.18"
         },
-        "toolset": {
+        "cc65Version": {
             "type": "string",
-            "description": "Development toolset",
+            "description": "cc65 version",
             "proposals": [
-                "CC65",
-                "newcc65"
+                "latest",
+                "V2.19",
+                "V2.18",
+                "V2.17",
+                "V2.16",
+                "V2.15",
+                "V2.14",
+                "V2.13.3",
+                "V2.13.2",
+                "V2.13.1",
+                "V2.13.0"
             ],
-            "default": "CC65"
+            "default": "latest"
         }
     },
     "platforms": [
