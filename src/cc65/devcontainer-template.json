@@ -1,5 +1,5 @@
 {
-    "id": "cc65-devcontainer",
+    "id": "cc65",
     "version": "0.1.0",
     "name": "cc65",
     "description": "Atari Lynx dev container template for CC65",
