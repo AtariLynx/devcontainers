@@ -1,8 +1,8 @@
 {
-    "name": "Sprpck Atari Lynx sprite utility",
-    "id": "sprpck",
+    "name": "Exomizer program",
+    "id": "exomizer",
     "version": "1.0.0",
-    "description": "Sprite utility for Atari Lynx game development",
+    "description": "Exomizer utility for compressing files",
     "options": {
         
     },

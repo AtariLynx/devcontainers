@@ -1,8 +1,8 @@
 {
-    "name": "Sprpck Atari Lynx sprite utility",
-    "id": "sprpck",
+    "name": "AtariSIO tools",
+    "id": "atarisio",
     "version": "1.0.0",
-    "description": "Sprite utility for Atari Lynx game development",
+    "description": "AtariSIO tools 'adir', 'ataricom' and 'dir2atr'",
     "options": {
         
     },

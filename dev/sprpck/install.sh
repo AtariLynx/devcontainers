@@ -1,7 +1,7 @@
 #!/bin/sh
 set -e
 
-echo "Activiting Activating feature 'sprpck'"
+echo "Activating feature 'sprpck'"
 
 mkdir -p /sdk
 cd /sdk
@@ -15,3 +15,4 @@ echo "The effective dev container containerUser's home directory is '$_CONTAINER
 
 cd /sdk/sprpck/src
 make && install sprpck /usr/bin
+rm -r /sdk/sprpck
