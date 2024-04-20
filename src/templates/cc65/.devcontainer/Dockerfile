@@ -12,14 +12,13 @@ ARG CC65_VERSION="latest"
 RUN echo 'Using CC65 Version: "${CC65_VERSION}"' 
 
 WORKDIR /usr/src
-RUN git clone https://github.com/cc65/cc65.git
-WORKDIR /usr/src/cc65
-
-RUN if [ "${CC65_VERSION}" != "latest" ]; then \
+RUN git clone https://github.com/cc65/cc65.git && cd cc65 && \
+    if [ "${CC65_VERSION}" != "latest" ]; then \
     git checkout tags/V${CC65_VERSION} -b "tag-${CC65_VERSION}"; \
-    fi
-
-RUN nice make -j2 && make install PREFIX=/usr prefix=/usr && rm -rf /usr/src/cc65
+    fi && \
+    nice make -j2 && \
+    make install PREFIX=/usr prefix=/usr && \
+    rm -rf /usr/src/cc65
 #RUN rm -rf /usr/src/cc65/wrk && rm -rf /usr/src/cc65/libwrk && rm -rf /usr/src/cc65/.git 
 
 # FROM alpine:3.19 AS final
