@@ -19,14 +19,13 @@ RUN if [ "${CC65_VERSION}" != "latest" ]; then \
     git checkout tags/V${CC65_VERSION} -b "tag-${CC65_VERSION}"; \
     fi
 
-RUN nice make -j2 && make mostlyclean
+RUN nice make -j2 && make install PREFIX=/usr prefix=/usr && rm -rf /usr/src/cc65
 #RUN rm -rf /usr/src/cc65/wrk && rm -rf /usr/src/cc65/libwrk && rm -rf /usr/src/cc65/.git 
 
 # FROM alpine:3.19 AS final
 # RUN apk update && \
 #     apk add --no-cache --virtual .build-deps git build-base
 # WORKDIR /usr/src/cc65
-# COPY --from=build /usr/src/cc65 .   
-RUN make install PREFIX=/usr prefix=/usr
+# COPY --from=build /usr/src/cc65 .
 CMD ash
 #WORKDIR /usr/src/cc65
