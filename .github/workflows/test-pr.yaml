@@ -14,8 +14,8 @@ jobs:
         id: filter
         with:
           filters: |
-            color: ./**/color/**
-            hello: ./**/hello/**
+            cc65: ./**/cc65/**
+            newcc65: ./**/newcc65/**
 
   test:
     needs: [detect-changes]
