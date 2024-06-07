@@ -5,8 +5,8 @@ set -e
 
 shopt -s dotglob
 
-SRC_DIR="/tmp/${TEMPLATE_ID}"
-cp -R "src/${TEMPLATE_ID}" "${SRC_DIR}"
+SRC_DIR="/tmp/templates/${TEMPLATE_ID}"
+cp -R "src/templates/${TEMPLATE_ID}" "${SRC_DIR}"
 
 pushd "${SRC_DIR}"
 
