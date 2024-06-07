@@ -1,7 +1,6 @@
 name: "CI - Test Templates"
 on:
   pull_request:
-  workflow_dispatch: 
 
 
 jobs:
@@ -14,8 +13,7 @@ jobs:
         id: filter
         with:
           filters: |
-            color: ./**/color/**
-            hello: ./**/hello/**
+            cc65: ./**/cc65/**
 
   test:
     needs: [detect-changes]
