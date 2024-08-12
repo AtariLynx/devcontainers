@@ -1,7 +1,6 @@
-name: "CI - Test Templates"
+name: "CI - Test Atari Lynx templates"
 on:
   pull_request:
-
 
 jobs:
   detect-changes:
