@@ -1,10 +1,10 @@
-name: "Release Aari Lynx devcontainer features"
+name: "Release Atari Lynx devcontainer features"
 on:
   workflow_dispatch:
 
 jobs:
   deploy:
-    if: ${{ github.ref == 'refs/heads/main' }}
+    #if: ${{ github.ref == 'refs/heads/main' }}
     runs-on: ubuntu-latest
     permissions:
       contents: write
