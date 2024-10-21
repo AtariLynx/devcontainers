@@ -1,0 +1,36 @@
+name: "Prebuild devcontainer"
+on:
+  workflow_dispatch:
+    # push:
+    #   branches:
+    #   - main
+    # pull_request:
+    #   paths:
+    #     - src/templates/**
+    #     - .github/workflows/prebuild.yaml
+    #     - .github/actions/**
+        
+jobs:
+  deploy:
+    if: ${{ github.ref == 'refs/heads/main' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout latest
+        uses: actions/checkout@v3
+
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v2
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Prebuild images
+        uses: devcontainers/ci@v0.3
+        with:
+          subFolder: .github
+          imageName: ghcr.io/atarilynx/devcontainers/cc65
+          imageTag: latest,1,1.2
+          push: always
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

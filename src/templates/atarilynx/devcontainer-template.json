@@ -35,5 +35,8 @@
     "platforms": [
         "Any"
     ],
-    "keywords": ["atari","lynx", "cc65"]
+    "keywords": ["atari","lynx", "cc65"],
+    "optionalPaths": [
+        ".github/*"
+    ]
 }
