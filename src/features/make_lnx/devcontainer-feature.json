@@ -4,7 +4,14 @@
     "version": "1.0.0",
     "description": "make_lnx utility for LNX headers",
     "options": {
-        
+        "version": {
+            "default": "latest",
+            "description": "Select the version to install.",
+            "proposals": [
+                "latest"
+            ],
+            "type": "string"
+        }
     },
     "installsAfter": [
         "ghcr.io/devcontainers/features/common-utils"

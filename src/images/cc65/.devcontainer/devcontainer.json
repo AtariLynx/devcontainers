@@ -36,9 +36,14 @@
 	// Use 'postCreateCommand' to run commands after the container is created.
 	// "postCreateCommand": "uname -a",
 	
-	"runArgs": [ 
-		"--env-file", ".devcontainer/devcontainer.env"
-	],
+	"remoteEnv": {
+		"CC65_HOME": "/usr/share/cc65/",
+		"CC65_INC": "/usr/share/cc65/include",
+		"CA65_INC": "/usr/share/cc65/asminc",
+		"LD65_CFG": "/usr/share/cc65/cfg",
+		"LD65_LIB": "/usr/share/cc65/lib",
+		"LD65_OBJ": "/usr/share/cc65/obj"
+	},
 
 	// Comment out connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
 	"remoteUser": "vscode"

@@ -2,10 +2,10 @@
 set -e
 
 echo "Activating feature 'make_lnx'"
-
-mkdir -p /sdk
-cp make_lnx.c /sdk
-cd /sdk
+SOURCE_DIR=/usr/src
+mkdir -p ${SOURCE_DIR}
+cp make_lnx.c ${SOURCE_DIR}
+cd ${SOURCE_DIR}
 
 gcc make_lnx.c -o make_lnx && install make_lnx /usr/bin
-rm /sdk/make_lnx.c
+rm ${SOURCE_DIR}/make_lnx.c

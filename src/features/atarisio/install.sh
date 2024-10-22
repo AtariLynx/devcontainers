@@ -2,11 +2,12 @@
 set -e
 
 echo "Activating feature 'AtariSIO'"
-
-mkdir -p /sdk
-cd /sdk
+SOURCE_DIR=/usr/src
+mkdir -p ${SOURCE_DIR}
+cd ${SOURCE_DIR}
 git clone https://github.com/HiassofT/AtariSIO.git
 
-cd /sdk/AtariSIO/tools
-make -f Makefile.posix && install adir ataricom dir2atr /usr/bin
-rm -r /sdk/AtariSIO
+cd AtariSIO/tools
+make -f Makefile.posix 
+install adir ataricom dir2atr /usr/bin
+rm -r ${SOURCE_DIR}/AtariSIO

@@ -1,6 +1,6 @@
 {
-    "name": "cc65",
-    "id": "cc65",
+    "name": "cc65suite",
+    "id": "cc65suite",
     "version": "1.0.0",
     "description": "cc65 feature for cross development of 65(C)02 systems",
     "options": {
