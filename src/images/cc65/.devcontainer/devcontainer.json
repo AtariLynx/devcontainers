@@ -1,14 +1,9 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.154.0/containers/alpine
 {
-	"name": "CC65",
+	"name": "cc65",
 	"build": {
-		"dockerfile": "Dockerfile",
-		// Update 'VARIANT' to pick an Alpine version: 3.10, 3.11, ..., 3.18
-		"args": { 
-			"VARIANT": "${templateOption:imageVariant}",
-			"CC65_VERSION": "${templateOption:cc65Version}"
-		}
+		"dockerfile": "Dockerfile"
 	},
 	
 	// Set *default* container specific settings.json values on container create. 
@@ -16,17 +11,14 @@
 		"vscode": {
 			"settings": {
 				"terminal.integrated.shell.linux": "/bin/ash"
-			},
-			"extensions": [
-				"ms-vscode.makefile-tools",
-				"ms-vscode.hexeditor"
-			]
+			}
 		}
 	},
 
 	"features": {
-		"ghcr.io/atarilynx/devcontainers/make_lnx:latest": { },
-		"ghcr.io/atarilynx/devcontainers/sprpck:latest": { }
+		"./local-features/cc65": {
+		  "cc65Version": "latest"
+		}
 	},
 
 	// Add the IDs of extensions you want installed when the container is created.
@@ -36,11 +28,16 @@
 	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "uname -a",
+	"postCreateCommand": "cc65 --version",
 	
-	"runArgs": [ 
-		"--env-file", ".devcontainer/devcontainer.env"
-	],
+	"remoteEnv": {
+		"CC65_HOME": "/usr/share/cc65/",
+		"CC65_INC": "/usr/share/cc65/include",
+		"CA65_INC": "/usr/share/cc65/asminc",
+		"LD65_CFG": "/usr/share/cc65/cfg",
+		"LD65_LIB": "/usr/share/cc65/lib",
+		"LD65_OBJ": "/usr/share/cc65/obj"
+	},
 
 	// Comment out connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
 	"remoteUser": "vscode"

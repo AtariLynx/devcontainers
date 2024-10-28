@@ -1,10 +1,17 @@
 {
     "name": "AtariSIO tools",
     "id": "atarisio",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "AtariSIO tools 'adir', 'ataricom' and 'dir2atr'",
     "options": {
-        
+        "version": {
+            "default": "latest",
+            "description": "Select the version to install.",
+            "proposals": [
+                "latest"
+            ],
+            "type": "string"
+        }
     },
     "installsAfter": [
         "ghcr.io/devcontainers/features/common-utils"

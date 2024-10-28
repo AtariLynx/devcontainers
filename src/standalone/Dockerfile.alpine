@@ -1,7 +1,7 @@
-# [Choice] Alpine version: 3.16, ..., 3.19
-ARG VARIANT="3.19"
+# [Choice] Alpine version: 3.16, ..., 3.20
+ARG VARIANT="3.20"
 
-FROM alpine:${VARIANT} as build
+FROM alpine:${VARIANT}
 ARG CC65_VERSION="latest"
 
 RUN apk update && \
@@ -15,10 +15,4 @@ RUN apk update && \
     rm -rf /usr/src/cc65 && \
     apk del build-dependencies
 
-# FROM alpine:3.19 AS final
-# RUN apk update && \
-#     apk add --no-cache --virtual build-dependencies make
-# WORKDIR /usr/src/cc65
-# COPY --from=build /usr/src/cc65 .
-#RUN make install PREFIX=/usr prefix=/usr
 CMD ash

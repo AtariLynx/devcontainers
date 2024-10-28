@@ -2,17 +2,13 @@
 set -e
 
 echo "Activating feature 'sprpck'"
+SOURCE_DIR=/usr/src
 
-mkdir -p /sdk
-cd /sdk
+mkdir -p ${SOURCE_DIR}
+cd ${SOURCE_DIR}
 git clone https://github.com/42Bastian/sprpck.git
 
-echo "The effective dev container remoteUser is '$_REMOTE_USER'"
-echo "The effective dev container remoteUser's home directory is '$_REMOTE_USER_HOME'"
-
-echo "The effective dev container containerUser is '$_CONTAINER_USER'"
-echo "The effective dev container containerUser's home directory is '$_CONTAINER_USER_HOME'"
-
-cd /sdk/sprpck/src
-make && install sprpck /usr/bin
-rm -r /sdk/sprpck
+cd sprpck/src
+make
+install sprpck /usr/bin
+rm -r ${SOURCE_DIR}/sprpck

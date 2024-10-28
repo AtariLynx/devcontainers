@@ -1,10 +1,22 @@
 {
     "name": "Exomizer program",
     "id": "exomizer",
-    "version": "1.0.0",
+    "version": "1.0.2",
     "description": "Exomizer utility for compressing files",
     "options": {
-        
+        "version": {
+            "default": "latest",
+            "description": "Select the version to install.",
+            "proposals": [
+                "latest",
+                "3.1.2",
+                "3.0.2",
+                "2.0.11",
+                "1.1.5",
+                "1.0"
+            ],
+            "type": "string"
+        }
     },
     "installsAfter": [
         "ghcr.io/devcontainers/features/common-utils"
