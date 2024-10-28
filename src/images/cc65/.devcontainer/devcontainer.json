@@ -1,7 +1,7 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.154.0/containers/alpine
 {
-	"name": "CC65",
+	"name": "cc65",
 	"build": {
 		"dockerfile": "Dockerfile"
 	},
@@ -11,15 +11,9 @@
 		"vscode": {
 			"settings": {
 				"terminal.integrated.shell.linux": "/bin/ash"
-			},
-			"extensions": [
-				"ms-vscode.makefile-tools",
-				"ms-vscode.hexeditor"
-			]
+			}
 		}
 	},
-
-	"postStartCommand": "",
 
 	"features": {
 		"./local-features/cc65": {
@@ -34,7 +28,7 @@
 	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "uname -a",
+	"postCreateCommand": "cc65 --version",
 	
 	"remoteEnv": {
 		"CC65_HOME": "/usr/share/cc65/",

@@ -28,7 +28,7 @@ jobs:
       - name: Prebuild images
         uses: devcontainers/ci@v0.3
         with:
-          subFolder: .github
+          subFolder: src/images/cc65
           imageName: ghcr.io/atarilynx/devcontainers/cc65
           imageTag: latest,1,1.2
           push: always
