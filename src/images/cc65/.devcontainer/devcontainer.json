@@ -16,8 +16,11 @@
 	},
 
 	"features": {
-		"./local-features/cc65": {
-		  "cc65Version": "latest"
+		// "./local-features/cc65": {
+		//   "cc65Version": "latest"
+		// }
+		"ghcr.io/atarilynx/devcontainers/cc65suite:1": {
+			"cc65Version": "latest"
 		}
 	},
 

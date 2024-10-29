@@ -1,0 +1,9 @@
+{
+  "features": {
+    "ghcr.io/atarilynx/devcontainers/cc65suite:1": {
+      "version": "1.0.0",
+      "resolved": "ghcr.io/atarilynx/devcontainers/cc65suite@sha256:935b470fdfb59158d93a54853cdb5b877987ab71808abcfd6fb2cc9d7096ef0e",
+      "integrity": "sha256:935b470fdfb59158d93a54853cdb5b877987ab71808abcfd6fb2cc9d7096ef0e"
+    }
+  }
+}
