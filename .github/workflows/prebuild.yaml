@@ -14,6 +14,10 @@ jobs:
   deploy:
     if: ${{ github.ref == 'refs/heads/main' }}
     runs-on: ubuntu-latest
+    continue-on-error: true
+    strategy:
+      matrix:
+        versions: ['2.15','2.16','2.17','2.18','2.19','latest']
     steps:
       - name: Checkout latest
         uses: actions/checkout@v3
@@ -36,7 +40,8 @@ jobs:
         with:
           subFolder: src/images/cc65
           imageName: docker.io/atarilynx/cc65base
-          imageTag: latest,1,1.2
+          imageTag: 1.0-${{matrix.versions}}
           push: always
+          template: "${{ matrix.versions }}"
 #        env:
 #          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
