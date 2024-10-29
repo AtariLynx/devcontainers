@@ -1,4 +1,4 @@
-name: "Release Atari Lynx devcontainer features"
+name: "Release devcontainer features"
 on:
   workflow_dispatch:
 
