@@ -35,7 +35,7 @@ jobs:
         uses: devcontainers/ci@v0.3
         with:
           subFolder: src/images/cc65
-          imageName: docker.io/atarilynx/devcontainers/cc65
+          imageName: docker.io/atarilynx/cc65base
           imageTag: latest,1,1.2
           push: always
 #        env:
