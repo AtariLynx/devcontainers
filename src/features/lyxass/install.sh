@@ -1,7 +1,7 @@
 #!/bin/sh
 set -e
 
-echo "Activating feature 'make_lnx'"
+echo "Activating feature 'lyxass'"
 SOURCE_DIR=/usr/src
 mkdir -p ${SOURCE_DIR}
 cd ${SOURCE_DIR}
