@@ -1,7 +1,7 @@
 {
     "name": "lynxenc utility",
     "id": "lynxenc",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Atari Lynx encryption and decryption tools",
     "options": {
         "version": {
