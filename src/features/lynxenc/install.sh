@@ -9,7 +9,7 @@ git init
 git config core.sparseCheckout true
 git remote add -f origin https://github.com/42Bastian/new_bll.git
 echo "lynxenc/" >> .git/info/sparse-checkout
-pull origin master
+git pull origin master
 cd lynxenc
 make
 install lynxenc lynxdec /usr/bin
